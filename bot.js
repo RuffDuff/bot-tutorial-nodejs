@@ -1,5 +1,5 @@
 var HTTPS = require('https');
-var cool = "potato";
+var cool = JSON.parse();
 
 var botID = process.env.BOT_ID;
 

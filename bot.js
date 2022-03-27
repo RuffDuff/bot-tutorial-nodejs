@@ -1,5 +1,4 @@
 var HTTPS = require('https');
-var cool = JSON.parse(this.req.chunks[1].data.subject.text);
 
 var botID = process.env.BOT_ID;
 
@@ -11,6 +10,7 @@ function respond() {
     this.res.writeHead(200);
     postMessage();
     this.res.end();
+    let botResponse = request.text
   } else {
     console.log("don't care");
     this.res.writeHead(200);
@@ -20,8 +20,6 @@ function respond() {
 
 function postMessage() {
   var botResponse, options, body, botReq;
-
-  botResponse = cool();
 
   options = {
     hostname: 'api.groupme.com',

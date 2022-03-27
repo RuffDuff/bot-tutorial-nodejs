@@ -10,7 +10,7 @@ function respond() {
     this.res.writeHead(200);
     postMessage();
     this.res.end();
-    let botResponse = request.text
+    let botResponse = request.text;
   } else {
     console.log("don't care");
     this.res.writeHead(200);
@@ -20,6 +20,7 @@ function respond() {
 
 function postMessage() {
   var botResponse, options, body, botReq;
+
 
   options = {
     hostname: 'api.groupme.com',
